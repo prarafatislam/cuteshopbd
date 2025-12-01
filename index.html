@@ -23,7 +23,7 @@
     
                 <div class="header-text text">
                     <span class="name">Cute Shop</span>
-                    <span class="profession">Web Developer</span>
+                    <span class="profession text">Web Developer</span>
                 </div>
 
             </div>  
@@ -137,9 +137,26 @@
             <div class="notice">
                 <i class="fa-regular fa-bell icons"></i>
             </div>
+
+            
+        </div>
+
+
+        <div class="product close">
+            <div id="product"></div>
         </div>
     </div>
+
+    <script>
+        fetch('product.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('product').innerHTML = data;
+      })
+      .catch(error => console.log('Error loading product:', error));
+    </script>
     
-    <script src="index.js"></script>
+    <script src="index.js">
+    </script>
 </body>
 </html>
