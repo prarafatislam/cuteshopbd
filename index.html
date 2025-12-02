@@ -7,7 +7,8 @@
 
     <script src="https://kit.fontawesome.com/3b38931e6f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Cute Shop</title>
+    <link rel="stylesheet" href="logign.html">
 </head>
 <body>
     <nav class="sidebar close">
@@ -97,7 +98,7 @@
                         </div>
                         <span class="mode-text text">Dark Mode</span>
 
-                        <div class="toggle-switch">
+                        <div class="toggle-switch" onclick="toggleMOde()">
                             <span class="switch"></span>
                         </div>
                     </li>
@@ -115,29 +116,31 @@
                 
                 <ul class="link">
                     <li>
-                        <a href="#">Home</a>
+                        <a class="nav-link" id="home" href="#">Home</a>
                     </li>
                 </ul>
                 <ul class="link">
                     <li>
-                        <a href="#">Product</a>
+                        <a href="#" class="nav-link" >Product</a>
                     </li>
                 </ul>
                 <ul class="link">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#" class="nav-link" >About</a>
                     </li>
                 </ul>
                 <ul class="link">
                     <li>
-                        <a href="#">Login</a>
+                        <a class="nav-link" id="login" href="#">Login</a>
+                        
                     </li>
                 </ul>
             </div>
             <div class="notice">
-                <i class="fa-regular fa-bell icons"></i>
+                <i class="fa-regular fa-bell notice-bell icons"></i>
             </div>
-
+            <div>
+        </div>
             
         </div>
 
@@ -154,8 +157,41 @@
         document.getElementById('product').innerHTML = data;
       })
       .catch(error => console.log('Error loading product:', error));
-    </script>
+
+
+    document.getElementById("home").addEventListener("click", function() {
+        const homePage = 'product.html';
+
+        fetch(homePage)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("product").innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error loading Home page');
+        });
+    });
+
+
+
+    document.getElementById("login").addEventListener("click", function() {
+        const loginPage = 'logign.html';
+
+        fetch(loginPage)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("product").innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error loading Home page');
+        });
+    });
+
+
+
     
+    </script>
+
     <script src="index.js">
     </script>
 </body>

@@ -13,7 +13,9 @@
     --primary-color-light: #f6f5ff;
     --text-color: #100e0e;
     --toggle-color: #ddd;
-
+    --btn-color: #ff006e;
+    --btntext-color: #ffffff;
+    
     /* ====== Transition === */
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -35,6 +37,8 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --text-color: #fff;
     --toggle-color: #ddd;
+    --btn-color: #695CFE;
+    --btntext-color: #fff;
 }
 
 /* ===== sidebar === */
@@ -358,7 +362,7 @@ body.dark .switch::before{
 
 .header-content{
     position: fixed;
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -448,8 +452,10 @@ body.dark .switch::before{
         transition: var(--tran-05);
     }
     .header-content{
+        width: 100%;
         position: fixed;
-        left: 0px;
+        justify-content: space-between;
+        left: 0;
         transition: var(--tran-05);
         padding: 10px;
     }
@@ -475,9 +481,15 @@ body.dark .switch::before{
     }
 
     .nav-content {
-        opacity: 0;
-        bottom: 0;
+        /* opacity: 0; */
+        bottom: -10px;
+        background-color: var(--primary-color);
     }
+    .header-content .nav-content .link{
+        /* background: #18191a; */
+        padding: 3px;
+    }
+
     .nav-content .link a{
         padding: -10px;
     }
@@ -486,12 +498,19 @@ body.dark .switch::before{
         padding: -12px;
     }
 
+    .header-content .notice{
+        margin-left: 250px;
+    }
+
+    .header-content .arafat{
+        left: 10px;
+    }
     .toggle-left{
         display: block;
         position: fixed;
         font-size: 40px;
         width: 30px;
-        left: 210px;
+        left: 220px;
         cursor: pointer;
         transition: var(--tran-04);
         color: var(--text-color);

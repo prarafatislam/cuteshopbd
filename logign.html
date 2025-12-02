@@ -1,0 +1,74 @@
+
+    <style>
+        body{
+            background: var(--body-color);
+            transition: var(--tran-04);
+        }
+        .form-design{
+            
+            margin: 20% 30%;
+            padding: 0 40px 0 20px;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+
+        .head{
+            display: grid;
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .label-item{
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .input-item{
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
+        }
+
+        .form-btn{
+            margin-top: 50px;
+            padding: 10px;
+            width: 106%;
+            text-align: center;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        @media(max-width: 78){
+            .form{
+                width: 80%;
+                height: 80%;
+                background: #ddd;
+            }
+
+
+        }
+    </style>
+
+    <div class="form-design">
+        <form class="form" action="">
+            <h2 class="head">Login Page</h2>
+
+            
+            <label class="label-item" for="">User Name:</label>
+            <input class="input-item" type="text" placeholder="Enter Your UserName">
+
+            <label class="label-item" for="">Your password:</label>
+            <input class="input-item" type="text" placeholder="Enter Your password">
+
+            <div><input class="form-btn" type="button" value="Login"></div>
+        </form>
+    </div>
+
+
+
